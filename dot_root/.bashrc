@@ -155,6 +155,6 @@ function tmux {
     if /usr/bin/tmux -V | grep -o "3.1b" > /dev/null ; then
        /usr/bin/tmux attach -t base ||/usr/bin/tmux new-session -s base
     else
-        echo "please update tmux to version 3.1b+"
+        echo "Error: failed to start tmuX. Please update tmux to version 3.1b+ and ensure config exists at $HOME/.config/tmux/tmux.conf"
     fi
 }
