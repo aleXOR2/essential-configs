@@ -151,10 +151,14 @@ bind '"\ed": " \C-e\C-u`__fzf_cd__`\e\C-e\er\C-m"'
 bind '"\ec": capitalize-word'
 
 function tmux {
-# local TMUX_CONF="$HOME/.config/tmux/tmux.conf"
-    if /usr/bin/tmux -V | grep -o "3.1b" > /dev/null ; then
-       /usr/bin/tmux attach -t base ||/usr/bin/tmux new-session -s base
+    local TMUX_CONF="$HOME/.config/tmux/tmux.conf"
+    tmux_bin="/usr/bin/tmux"
+    if [[ ! -f $TMUX_CONF ]]; then
+        echo "Error: config not found at ${TMUX_CONF}. Please add config"
+    fi
+    if $tmux_bin -V | grep -o "3.1b" > /dev/null ; then
+       $tmux_bin attach-session -t base || $tmux_bin new-session -s base
     else
-        echo "Error: failed to start tmuX. Please update tmux to version 3.1b+ and ensure config exists at $HOME/.config/tmux/tmux.conf"
+        echo "Error: failed to start tmuX. Please update tmux to version 3.1b+"
     fi
 }
