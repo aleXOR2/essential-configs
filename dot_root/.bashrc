@@ -156,7 +156,7 @@ function tmux {
     if [[ ! -f $TMUX_CONF ]]; then
         echo "Error: config not found at ${TMUX_CONF}. Please add config"
     fi
-    if $tmux_bin -V | grep -o "3.1b" > /dev/null ; then
+    if $tmux_bin -V | grep --perl-regexp -o "3\.\d{1}" > /dev/null ; then
        $tmux_bin attach-session -t base || $tmux_bin new-session -s base
     else
         echo "Error: failed to start tmuX. Please update tmux to version 3.1b+"
