@@ -1,0 +1,46 @@
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin($LOCAL_BUNDLE_PATH)
+
+Plugin 'VundleVim/Vundle.vim'
+
+" vim themes
+Plugin 'morhetz/gruvbox'
+
+" git support
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+
+" language support
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'hallison/vim-markdown'
+Plugin 'indenthtml.vim'
+Plugin 'vim-scripts/ttcn-syntax'
+Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'nickhutchinson/vim-cmake-syntax'
+Plugin 'rust-lang/rust.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+
+Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'hdima/python-syntax'
+
+" files and movement
+Plugin 'a.vim'
+Plugin 'nelstrom/vim-visual-star-search'
+
+" additional tools
+Plugin 'bling/vim-airline'
+Plugin 'majutsushi/tagbar'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'mileszs/ack.vim'
+
+" fzf
+set rtp+=~/.fzf
+Plugin 'junegunn/fzf.vim'
+
+call vundle#end()
+filetype plugin indent on
+

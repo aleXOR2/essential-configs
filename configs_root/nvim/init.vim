@@ -47,6 +47,23 @@ au BufRead,BufNewFile *.fountain set filetype=fountain
 set splitbelow splitright 
 set nobackup nowritebackup
 set clipboard+=unnamedplus
+" swap files
+set noswapfile
+set nobackup
+" undodir -> https://vi.stackexchange.com/questions/6/how-can-i-use-the-undofile
+if !isdirectory($HOME . "/.config/nvim/undodir")
+    call mkdir($HOME . "/.config/nvim/undodir", "p", 0700)
+endif
+set undodir=$HOME."/.config/nvim/undodir"
+set undofile
+set incsearch "it highlights the first occurence of expression typed in search line
+
+set hidden " allow to open multiple buffers without saving https://www.youtube.com/watch?v=DogKdiRx7ls
+set colorcolumn=119
+
+" additional basic conf from https://www.youtube.com/watch?v=n9k9scbTuvQ
+set noerrorbells
+set smartcase " case insensitive search until user put a capital letter
 
 set number
 " relative linenumber only in normal mode
@@ -103,6 +120,7 @@ let g:limelight_conceal_guifg = '#777777'"
 " use https://terminal.sexy/ or manjaro embeded gcolor2
 highlight Cursor guibg=#626262
 highlight CursorLine guibg=#777777
+highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 " Mappings "
 let g:mapleader = " " " \<Space> https://www.chrisatmachine.com/Neovim/02-vim-general-settings/
@@ -114,7 +132,7 @@ xnoremap J :move '>+1<CR>gv-gv
 
 nnoremap Q <nop>
 " reszie windows with cursor keys (to see more of the command bar)
-nnoremap <Up> :resize +2<CR> 
+nnoremap <Up> :resize +2<CR> "TODO: unbind <UP>
 nnoremap <Down> :resize -2<CR>
 nnoremap <Left> :vertical resize +2<CR>
 nnoremap <Right> :vertical resize -2<CR>
