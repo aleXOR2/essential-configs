@@ -1,0 +1,75 @@
+{ "indentRainbow.includedLanguages": ["python"],
+    "search.usePCRE2": true,
+    "search.showLineNumbers": true,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "search.useGlobalIgnoreFiles": true,
+    "editor.rulers": [119],
+    "[markdown]":
+        {"editor.quickSuggestions": true,},
+    "emojisense.languages": {
+        "markdown": true,
+        "git-commit": true,
+        "plaintext": false,
+        "json": true,
+        "python": true
+    },
+    // The number of spaces a tab is equal to.
+    "editor.tabSize": 4,
+    // Insert spaces when pressing Tab.
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.renderWhitespace": "all",
+    "editor.trimAutoWhitespace": true,
+    "debug.allowBreakpointsEverywhere": true,
+    "workbench.colorTheme": "Visual Studio 2019 Light",
+    "window.zoomLevel": 0,
+    "editor.fontFamily": "Lucida Console", //"'Ubuntu Mono', monospace",
+    "editor.fontSize": 12,
+    "window.openFilesInNewWindow": "on",
+    "window.menuBarVisibility": "visible",
+    "files.exclude": {
+        "**/*.un~": true,
+        "**/*~": true
+    },
+    "files.autoSave": "onWindowChange",
+    "files.eol": "\n",
+    "python.linting.enabled": true,
+    "python.linting.pep8Enabled": true,
+    "python.formatting.autopep8Args": ["--max-line-length=119"],
+    // "pyformat.autopep8Args": [" --max-line-length=119"],
+    "[python]": {
+        "editor.rulers": [
+            119
+        ],
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "119"
+        ],
+    "pyformat.isortArgs": ["-w 120", "-sl"], // force_single_line to True (-sl
+    "spellright.language": [
+        "English (American)"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex"
+    ],
+    "breadcrumbs.enabled": true,
+    "update.mode": "none",
+    "workbench.activityBar.visible": true,
+    "workbench.editor.showTabs": true,
+    "workbench.editor.enablePreview": false,
+    "markdown.extension.print.absoluteImgPath": false,
+    "markdown.extension.toc.unorderedList.marker": "*",
+    "python.linting.flake8Enabled": true,
+    "git.enableSmartCommit": true,
+    "gitlens.codeLens.recentChange.command": "gitlens.showQuickRepoHistory",
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.defaultDateStyle": "absolute",
+    "azureFunctions.showProjectWarning": false
+}

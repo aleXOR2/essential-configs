@@ -1,0 +1,34 @@
+[user]
+	email = 21229293+aleXOR2@users.noreply.github.com
+	name = aleXOR2
+[core]
+	editor = nano
+[push]
+	default = current
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+	configstyle = diff3
+[difftool]
+	prompt = 0
+[alias]
+	amend = commit -a --amend -C HEAD
+	st = status
+	clean = clean -x -d
+    fclean = clean -x -f -d
+    co = checkout
+    ci = commit
+    b = branch
+    a = add
+    cob = checkout -b
+    unstage = reset HEAD --
+    lg = log --graph --pretty=format:'%C(bold red)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold green)<%an>%Creset' --decorate --date=short
+    treesmas = log --graph --abbrev-commit --decorate --all --format=format:'%C(bold blue)%h%C(reset) - %C(cyan)%aD%C(reset) - %an %C(blue)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(green)%s%C(reset)'
+[http]
+	sslVerify = true
+[credential]
+	helper = cache --timeout=3600
+[svn]
+	rmdir = true
+

@@ -1,0 +1,51 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "alt+meta+left",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "ctrl+alt+-",
+        "command": "-workbench.action.navigateBack"
+    },
+    {
+        "key": "alt+meta+right",
+        "command": "workbench.action.navigateForward"
+    },
+    {
+        "key": "ctrl+f2",
+        "command": "editor.action.transformToUppercase"
+    },
+    {
+        "key": "ctrl+shift+f2",
+        "command": "editor.action.transformToLowercase"
+    },
+    {
+        "key": "ctrl+meta+p",
+        "command": "workbench.action.openPreviousEditorFromHistory"
+    },
+    {
+        "key": "ctrl+k ctrl+k",
+        "command": "editor.foldAll",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+k ctrl+0",
+        "command": "-editor.foldAll",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+left",
+        "command": "editor.action.moveCarretLeftAction"
+    },
+    {
+        "key": "alt+right",
+        "command": "editor.action.moveCarretRightAction"
+    },
+    // {
+    //     "key": "ctrl+v tab",
+    //     "command": "type",
+    //     "args": { "text": "\t" },
+    //     "when": "editorTextFocus"
+    // }
+]
